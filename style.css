@@ -10,7 +10,7 @@
 	--buttonColor: black;
 }
 
-tml,
+html,
 body {
 	padding: 0;
 	margin: 0;
@@ -375,6 +375,15 @@ h6 {
 	color: #fff;
 	background-color: var(--buttonColor);
 	border: none
+}
+
+@media screen and (max-width: 600px) {
+    #preview-shadow {
+        width: 250px;
+    }
+    #preview {
+        width: 250px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
