@@ -6,11 +6,18 @@ title: CV
     p {
         text-align: justify;
      }
+     ul {
+        list-style-type: none;
+     }
 </style>
 
 # Curriculum Vitæ
 
-{% include contact.html %}
+<span class="li-icon">{% include svg/pin-alt.svg %}</span><span>{{ site.address }}</span>\
+<span class="li-icon">{% include svg/phone.svg %}</span><span>{{ site.phone }}</span>\
+<span class="li-icon">{% include svg/mail.svg %}</span><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>\
+<span class="li-icon">{% include svg/internet.svg %}</span><a href="{{ site.url }}">{{ site.url }}</a>
+
 
 # CV file
 [Click here](../assets/files/cv.pdf) to dornload the full CV.
