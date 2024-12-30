@@ -19,19 +19,19 @@ phone: +380 732090252
 
 # social media links
 social:
-  #facebook: maximazimov
+  facebook: maximazimov
   x: cheremnovmaksym
-  #mastodon:
-  #  user: username
-  #  domain: mastodon.social 
-  #bluesky:
-  #  user: username
-  #  domain: bsky.social
+  mastodon:
+    user: username
+    domain: mastodon.social 
+  bluesky:
+    user: username
+    domain: bsky.social
   instagram: maximazimov
   linkedin: maksym-cheremnov-682585171
-  #xing: username
-  #stackoverflow: 0000000/username
-  #medium: username
+  xing: username
+  stackoverflow: 0000000/username
+  medium: username
   github: mcheremnov
 
 # build settings
