@@ -1,4 +1,5 @@
 title: Maskym Cheremnov
+title_ua: Максим Черемнов
 description: Fullstack developer for web applications
 baseurl: ""
 url: https://mcheremnov.github.io/
@@ -7,7 +8,9 @@ theme: cvless
 
 # site settings
 taglong: Fullstack developer for web applications
+taglong_ua: Fullstack розробник веб-додатків
 tagshort: Personal website
+tagshort_ua: Персональний вебсайт
 
 # author settings
 author:
@@ -35,6 +38,8 @@ exclude:
   - docker-compose.yml
 
 plugins:
+  - jekyll-polyglot
+  - jekyll-redirect-from
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate-v2
@@ -44,3 +49,9 @@ plugins:
 sass:
   sourcemap: never
   
+languages: ["en", "ua"]
+default_lang: "en"
+exclude_from_localization: ["javascript", "images", "css", "public"]
+parallel_localization: false
+whitelist:
+  - jekyll-redirect-from

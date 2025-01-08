@@ -1,12 +1,8 @@
 ---
 layout: home
+lang: en
 title: Home
 ---
-<style>
-    p {
-        text-align: justify;
-     }
-</style>
 
 # About
 
@@ -17,7 +13,7 @@ Hi there! 👋 I’m Maksym Cheremnov, a passionate and dedicated full-stack dev
 # My Journey
 I’ve always been fascinated by the intersection of creativity and technology. My journey into software development began after completing law school, I found myself at a crossroads. While I appreciated the analytical rigor and problem-solving aspects of law, I felt a pull toward something more dynamic and creative. That’s when I made the bold decision to pivot my career and move to Prague to immerse myself in the world of IT. Since then, I’ve been on a mission to craft applications that solve real-world problems and make people’s lives easier.
 
-# What I Do
+# What I Do?
 
 As a full-stack developer, I work across the entire development spectrum:
 

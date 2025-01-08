@@ -20,7 +20,7 @@ title: CV
 
 
 # CV file
-[Click here](../assets/files/cv.pdf) to dornload the full CV.
+[Click here](/assets/files/cv.pdf | relative_url) to dornload the full CV.
 
 ## Profile
 Maksym is a software engineer with over 3 years of experience in developing websites and web applications. While specializing in backend development, Maksym has also worked on frontend projects.

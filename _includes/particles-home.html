@@ -1,20 +1,14 @@
 <div id="particles-js" class="fullscreen">
-  <nav>
-    <div class="language-group" style="margin: 1em; float: right;">
-      <button type="button" class="btn btn-outline-secondary">
-        <a href="en"><span>{% include svg/us24x24.svg %}</span></a>
-      </button>
-      <button type="button" class="btn btn-outline-secondary">
-        <a href="ua/index"><span>{% include svg/ua24x24.svg %}</span></a>
-      </button>
-    </div>
-  </nav>
+  {% include language-selector.html %}
   <div class="jumbotron text-center">
-    {% if site.photo %}
-    <img class="particles-photo" src="{{ site.photo }}" />
-    {% endif %}
+    <img class="particles-photo" src="{{ site.photo | relative_url }}" />
+    {% if page.url == "/index.ua/" %}
+    <h1 class="particles-title">{{ site.title_ua }}</h1>
+    <h1 class="particles-subtitle">{{ site.taglong_ua }}</h1>
+    {% else %}
     <h1 class="particles-title">{{ site.title }}</h1>
     <h1 class="particles-subtitle">{{ site.taglong }}</h1>
+    {% endif %}
     <div class="nowrap">
       {% if site.profile.facebook %}
       <a class="particles-icon" href="{{ site.profile.facebook }}">{% include svg/facebook.svg %}</a>
@@ -49,7 +43,11 @@
       {% if site.profile.dev %}
       <a class="particles-icon" href="{{ site.profile.dev }}">{% include svg/bookmark-book.svg %}</a>
       {% endif %}
+      {% if page.url == "/index.ua/" %}
+      <a class="particles-icon" href="{{site.url}}/cv.ua">{% include svg/cv-circled.svg %}</a>
+      {% else %}
       <a class="particles-icon" href="cv">{% include svg/cv-circled.svg %}</a>
+      {% endif %}
     </div>
   </div>
   <div class="particles-scroll">
