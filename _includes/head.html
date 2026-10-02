@@ -31,6 +31,8 @@
     .language-group { display: flex; gap: .5em; }
     /* Theme sizes the photo as 50% of the shrink-to-fit hero, so it resized when text width changed per language. */
     #particles-js .particles-photo { display: block; width: min(16rem, 60vw); aspect-ratio: 1; object-fit: cover; }
+    /* Theme title is 2.5em and nowrap, which overflows narrow phones; scale with viewport below that. */
+    #particles-js .particles-title { font-size: clamp(1.5rem, 8vw, 2.5em); }
   </style>
 
   <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
