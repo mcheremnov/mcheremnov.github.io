@@ -9,21 +9,27 @@
     {{ site.title }} &middot; {{ page.title }}
     {% endif %}
   </title>
-  {% if page.lang %}
-  {% if page.lang == "ua" %}
-  {% assign ua_url = page.url %}
-  {% assign en_url = page.url | replace: ".ua/", "/" | replace: "/index/", "/" %}
-  {% elsif page.url == "/" %}
-  {% assign en_url = page.url %}
-  {% assign ua_url = "/index.ua/" %}
-  {% else %}
-  {% assign en_url = page.url %}
-  {% assign ua_url = page.url | append: "x" | replace: "/x", ".ua/" %}
-  {% endif %}
-  <link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}" />
-  <link rel="alternate" hreflang="uk" href="{{ ua_url | absolute_url }}" />
-  <link rel="alternate" hreflang="x-default" href="{{ en_url | absolute_url }}" />
-  {% endif %}
+  <script>
+    // Pick language before first paint: ?lang= param, then saved choice, then browser language.
+    window.I18N_LANGS = {{ site.i18n_languages | jsonify }};
+    (function () {
+      var langs = window.I18N_LANGS, lang = new URLSearchParams(location.search).get("lang");
+      if (langs.indexOf(lang) === -1) {
+        try { lang = localStorage.getItem("lang"); } catch (e) {}
+      }
+      if (langs.indexOf(lang) === -1) {
+        lang = (navigator.language || "").slice(0, 2).toLowerCase();
+      }
+      document.documentElement.lang = langs.indexOf(lang) === -1 ? langs[0] : lang;
+    })();
+  </script>
+  <style>
+    {%- for lang in site.i18n_languages %}
+    html:not([lang="{{ lang }}"]) [data-lang="{{ lang }}"] { display: none !important; }
+    {%- endfor %}
+    .header-actions { display: flex; align-items: center; gap: .75em; }
+    .language-group { display: flex; gap: .5em; }
+  </style>
 
   <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/open-color.min.css' | relative_url }}">

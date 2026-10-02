@@ -1,14 +1,9 @@
 <div id="particles-js" class="fullscreen">
-  {% include language-selector.html %}
+  <div style="float: right; margin: 1em;">{% include language-selector.html %}</div>
   <div class="jumbotron text-center">
     <img class="particles-photo" src="{{ site.photo | relative_url }}" />
-    {% if page.url == "/index.ua/" %}
-    <h1 class="particles-title">{{ site.title_ua }}</h1>
-    <h1 class="particles-subtitle">{{ site.taglong_ua }}</h1>
-    {% else %}
-    <h1 class="particles-title">{{ site.title }}</h1>
-    <h1 class="particles-subtitle">{{ site.taglong }}</h1>
-    {% endif %}
+    <h1 class="particles-title">{% include t.html key="title" %}</h1>
+    <h1 class="particles-subtitle">{% include t.html key="tagline" %}</h1>
     <div class="nowrap">
       {% if site.profile.facebook %}
       <a class="particles-icon" href="{{ site.profile.facebook }}">{% include svg/facebook.svg %}</a>
@@ -43,11 +38,7 @@
       {% if site.profile.dev %}
       <a class="particles-icon" href="{{ site.profile.dev }}">{% include svg/bookmark-book.svg %}</a>
       {% endif %}
-      {% if page.url == "/index.ua/" %}
-      <a class="particles-icon" href="{{ '/cv.ua' | relative_url }}">{% include svg/cv-circled.svg %}</a>
-      {% else %}
-      <a class="particles-icon" href="{{ '/cv' | relative_url }}">{% include svg/cv-circled.svg %}</a>
-      {% endif %}
+      <a class="particles-icon" href="{{ '/cv/' | relative_url }}">{% include svg/cv-circled.svg %}</a>
     </div>
   </div>
   <div class="particles-scroll">

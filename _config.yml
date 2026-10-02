@@ -1,23 +1,18 @@
 title: Maksym Cheremnov
-title_ua: Максим Черемнов
 description: Fullstack developer for web applications
 baseurl: ""
 url: https://mcheremnov.github.io
 
 theme: cvless
 
-# site settings
-taglong: Fullstack developer for web applications
-taglong_ua: Fullstack розробник веб-додатків
-tagshort: Personal website
-tagshort_ua: Персональний вебсайт
+# languages: strings in _data/i18n/<lang>.yml, first one is the default
+i18n_languages: ["en", "uk"]
 
 # author settings
 author:
   name: Maksym Cheremnov
   email: cheremnovmaksym@gmail.com
 photo: assets/files/photo.jpeg
-address: Ukraine, Odesa
 phone: +380 732090252
 
 # social media links

@@ -1,0 +1,8 @@
+{%- comment -%}
+  Renders a translated string from _data/i18n/<lang>.yml in every language.
+  CSS in head.html shows only the span matching <html lang>.
+  Usage: {% include t.html key="tagline" %}
+{%- endcomment -%}
+{%- for lang in site.i18n_languages -%}
+<span data-lang="{{ lang }}">{{ site.data.i18n[lang][include.key] }}</span>
+{%- endfor -%}

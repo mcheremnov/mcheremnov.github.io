@@ -1,8 +1,8 @@
-<div class="language-group" style="margin: .5em; float: right;">
-    <a class="btn btn-outline-secondary" style="margin: .5em;" href="{{ '/' | relative_url }}" hreflang="en" aria-label="English">
-        <span>{% include svg/us24x24.svg %}</span>
-    </a>
-    <a class="btn btn-outline-secondary" href="{{ '/index.ua' | relative_url }}" hreflang="uk" aria-label="Українська">
-        <span>{% include svg/ua24x24.svg %}</span>
-    </a>
+<div class="language-group">
+    {%- for lang in site.i18n_languages %}
+    <button type="button" class="btn btn-outline-secondary btn-sm" data-set-lang="{{ lang }}"
+        aria-label="{{ site.data.i18n[lang].lang_name }}" title="{{ site.data.i18n[lang].lang_name }}">
+        {%- if lang == "uk" %}{% include svg/ua24x24.svg %}{% else %}{% include svg/us24x24.svg %}{% endif -%}
+    </button>
+    {%- endfor %}
 </div>

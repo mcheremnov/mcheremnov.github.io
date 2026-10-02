@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{% if page.lang == 'ua' %}uk{% else %}en{% endif %}">
+<html lang="{{ site.i18n_languages | first }}">
 
 {% include head.html %}
 <style>
@@ -19,6 +19,7 @@
     </div>
   </div>
   <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/i18n.js' | relative_url }}"></script>
   {% if page.title != "404" %}
   <script src="{{ '/assets/js/darkmode.js' | relative_url }}"></script>
   {% endif %}
