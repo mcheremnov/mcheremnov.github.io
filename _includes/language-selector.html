@@ -1,17 +1,8 @@
 <div class="language-group" style="margin: .5em; float: right;">
-    {%- for lang in site.languages -%}
-    {%- if lang == site.default_lang -%}
-    <button type="button" class="btn btn-outline-secondary" style="margin: .5em;">
-        <a href="/">
-            <span>{% include svg/us24x24.svg %}</span>
-        </a>
-    </button>
-    {%- else -%}
-    <button type="button" class="btn btn-outline-secondary">
-        <a href="/index.ua">
-            <span>{% include svg/ua24x24.svg %}</span>
-        </a>
-    </button>
-    {%- endif -%}
-    {%- endfor -%}
+    <a class="btn btn-outline-secondary" style="margin: .5em;" href="{{ '/' | relative_url }}" hreflang="en" aria-label="English">
+        <span>{% include svg/us24x24.svg %}</span>
+    </a>
+    <a class="btn btn-outline-secondary" href="{{ '/index.ua' | relative_url }}" hreflang="uk" aria-label="Українська">
+        <span>{% include svg/ua24x24.svg %}</span>
+    </a>
 </div>

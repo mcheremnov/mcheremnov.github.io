@@ -44,9 +44,9 @@
       <a class="particles-icon" href="{{ site.profile.dev }}">{% include svg/bookmark-book.svg %}</a>
       {% endif %}
       {% if page.url == "/index.ua/" %}
-      <a class="particles-icon" href="{{site.url}}/cv.ua">{% include svg/cv-circled.svg %}</a>
+      <a class="particles-icon" href="{{ '/cv.ua' | relative_url }}">{% include svg/cv-circled.svg %}</a>
       {% else %}
-      <a class="particles-icon" href="cv">{% include svg/cv-circled.svg %}</a>
+      <a class="particles-icon" href="{{ '/cv' | relative_url }}">{% include svg/cv-circled.svg %}</a>
       {% endif %}
     </div>
   </div>

@@ -1,8 +1,8 @@
-title: Maskym Cheremnov
+title: Maksym Cheremnov
 title_ua: Максим Черемнов
 description: Fullstack developer for web applications
 baseurl: ""
-url: https://mcheremnov.github.io/
+url: https://mcheremnov.github.io
 
 theme: cvless
 
@@ -36,9 +36,11 @@ exclude:
   - Gemfile
   - vendor/
   - docker-compose.yml
+  # posts hidden for now; remove these two lines to publish them again
+  - _posts
+  - posts.md
 
 plugins:
-  - jekyll-polyglot
   - jekyll-redirect-from
   - jekyll-feed
   - jekyll-gist
@@ -48,10 +50,9 @@ plugins:
 
 sass:
   sourcemap: never
-  
-languages: ["en", "ua"]
-default_lang: "en"
-exclude_from_localization: ["javascript", "images", "css", "public"]
-parallel_localization: false
+
+feed:
+  path: atom.xml
+
 whitelist:
   - jekyll-redirect-from

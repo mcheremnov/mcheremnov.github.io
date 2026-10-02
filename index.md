@@ -8,7 +8,7 @@ title: Home
 
 Hi there! 👋 I’m Maksym Cheremnov, a passionate and dedicated full-stack developer with more than 3 years of experience building dynamic, user-friendly web applications. I specialize in turning complex problems into elegant, scalable solutions that delight users and deliver results.
 
-[Click here](cv) to see the full CV, and [here](assets/files/cv.pdf) to download it.
+[Click here]({{ '/cv' | relative_url }}) to see the full CV, and [here]({{ '/assets/files/cv.pdf' | relative_url }}) to download it.
 
 # My Journey
 I’ve always been fascinated by the intersection of creativity and technology. My journey into software development began after completing law school, I found myself at a crossroads. While I appreciated the analytical rigor and problem-solving aspects of law, I felt a pull toward something more dynamic and creative. That’s when I made the bold decision to pivot my career and move to Prague to immerse myself in the world of IT. Since then, I’ve been on a mission to craft applications that solve real-world problems and make people’s lives easier.
